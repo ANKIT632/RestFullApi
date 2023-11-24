@@ -4,19 +4,30 @@ const users = require('./MOCK_DATA.json');
 const app = express();
 const PORT = 8000;
 
+// On same route handle multiple request.
+// use dynamic path  
+app.route("/api/users/:id").get((req, res) => {
+    const id = Number(req.params.id);
+    const user = users.find((user) => user.id === id);
+    return res.json(user);
+})
+    .patch((req, res) => {
+        return res.json({ status: "padding" });
+    })
+    .delete((req, res) => {
+        return res.json({ status: "padding" });
+    })
+
 app.get("/api/users", (req, res) => {
     return res.json(users);
 })
 
-
-//Dynamic path param
-app.get("/api/users/:id", (req, res) => {
-   const id=Number(req.params.id);
-   const user=users.find((user)=>user.id===id);
-   return res.json(user);
+app.post("/api/users", (req, res) => {
+    return res.json({ status: "padding" });
 })
 
-app
+
+
 
 
 app.listen(PORT, () => {
