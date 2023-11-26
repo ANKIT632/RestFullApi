@@ -1,0 +1,11 @@
+JSON :
+ The JSON.stringify() method is used to convert a JavaScript object or value to a JSON string. JSON, or JavaScript Object Notation, is a lightweight data-interchange format. It is easy for humans to read and write and easy for machines to parse and generate. It is a text-based format that uses key-value pairs.
+
+ JSON.stringify(value, replacer, space) :
+ value: The JavaScript object or value to convert to a JSON string.
+ replacer: An optional function that is called for each property of the object to be converted. 
+ space: An optional string or number that specifies the indentation of the output
+
+
+const users = require('./MOCK_DATA.json');
+ require() function in Node.js imports the JSON file as an JavaScript object.
