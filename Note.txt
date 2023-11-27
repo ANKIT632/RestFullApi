@@ -9,3 +9,7 @@ JSON :
 
 const users = require('./MOCK_DATA.json');
  require() function in Node.js imports the JSON file as an JavaScript object.
+
+
+middleware:
+  express.urlencoded({ extended: false }) middleware is responsible for parsing URL-encoded form data. This means that when a user submits a form, the middleware will extract the data from the form's URL-encoded format and make it available to your application's routing logic.
