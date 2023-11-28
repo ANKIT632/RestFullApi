@@ -24,7 +24,11 @@ app.use((req,res,next)=>{
 app.route("/api/users/:id").get((req, res) => {
     const id = Number(req.params.id);
     const user = users.find((user) => user.id === id);
+    if(user)
     return res.json(user);
+  
+    else
+    return res.status(404).json({status:"data not found"});
 })
 
      //Edit the user.
@@ -50,7 +54,7 @@ app.post("/api/users", (req, res) => {
 
     //add new file with update data
     fs.writeFile("./Data.json", JSON.stringify(users), (err, data) => {
-        return res.json({ status: "success", id: users.length });
+        return res.status(201).json({ status: "success", id: users.length });
     });
 
 

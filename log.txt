@@ -1,3 +1,12 @@
 
 Mon Nov 27 2023 22:43:21 GMT+0530 (India Standard Time) : ::1  POST : /api/users
 Mon Nov 27 2023 22:43:47 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1001
+Mon Nov 27 2023 22:45:48 GMT+0530 (India Standard Time) : ::1  POST : /api/users
+Tue Nov 28 2023 23:20:29 GMT+0530 (India Standard Time) : ::1  POST : /api/users/
+Tue Nov 28 2023 23:21:23 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1002
+Tue Nov 28 2023 23:21:38 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1003
+Tue Nov 28 2023 23:21:53 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1004
+Tue Nov 28 2023 23:21:56 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1004
+Tue Nov 28 2023 23:24:21 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1004
+Tue Nov 28 2023 23:24:52 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1004
+Tue Nov 28 2023 23:25:21 GMT+0530 (India Standard Time) : ::1  GET : /api/users/1003
