@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: false }));
 //add custom middleware which maintain log
 
 
-app.use((req,res,next)=>{
-   fs.appendFile('log.txt',`\n${new Date(Date.now() + (new Date() - Date.now()))} : ${req.ip}  ${req.method} : ${req.path}`,(err,data)=>{
-    next();
-   });
-  
+app.use((req, res, next) => {
+    fs.appendFile('log.txt', `\n${new Date(Date.now() + (new Date() - Date.now()))} : ${req.ip}  ${req.method} : ${req.path}`, (err, data) => {
+        next();
+    });
+
 });
 
 
@@ -24,18 +24,18 @@ app.use((req,res,next)=>{
 app.route("/api/users/:id").get((req, res) => {
     const id = Number(req.params.id);
     const user = users.find((user) => user.id === id);
-    if(user)
-    return res.json(user);
-  
+    if (user)
+        return res.json(user);
+
     else
-    return res.status(404).json({status:"data not found"});
+        return res.status(404).json({ status: "data not found" });
 })
 
-     //Edit the user.
+    //Edit the user.
     .patch((req, res) => {
-        const id= req.params.id;
-        const body =req.body;
-        
+        const id = req.params.id;
+        const body = req.body;
+
 
         return res.json({ status: "padding" });
     })
@@ -48,7 +48,7 @@ app.get("/api/users", (req, res) => {
 })
 
 app.post("/api/users", (req, res) => {
-  
+
     const body = req.body;
     users.push({ id: users.length + 1, ...body });
 
