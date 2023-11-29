@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.use((req, res, next) => {
+
+
     fs.appendFile('log.txt', `\n${new Date(Date.now() + (new Date() - Date.now()))} : ${req.ip}  ${req.method} : ${req.path}`, (err, data) => {
         next();
     });
@@ -22,6 +24,8 @@ app.use((req, res, next) => {
 // On same route handle multiple request.
 // use dynamic path  
 app.route("/api/users/:id").get((req, res) => {
+
+    res.setHeader("X-data", "give specific data");
     const id = Number(req.params.id);
     const user = users.find((user) => user.id === id);
     if (user)
