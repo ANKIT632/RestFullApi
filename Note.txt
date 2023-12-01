@@ -1,19 +1,32 @@
-JSON :
+#JSON :
  The JSON.stringify() method is used to convert a JavaScript object or value to a JSON string. JSON, or JavaScript Object Notation, is a lightweight data-interchange format. It is easy for humans to read and write and easy for machines to parse and generate. It is a text-based format that uses key-value pairs.
 
- JSON.stringify(value, replacer, space) :
+#JSON.stringify(value, replacer, space) :
  value: The JavaScript object or value to convert to a JSON string.
  replacer: An optional function that is called for each property of the object to be converted. 
  space: An optional string or number that specifies the indentation of the output
 
-
-const users = require('./MOCK_DATA.json');
+#const users = require('./MOCK_DATA.json');
  require() function in Node.js imports the JSON file as an JavaScript object.
 
 
-middleware:
+#middleware:
   express.urlencoded({ extended: false }) middleware is responsible for parsing URL-encoded form data. This means that when a user submits a form, the middleware will extract the data from the form's URL-encoded format and make it available to your application's routing logic.
 
 
-timestamps:true :
+#timestamps:true :
     opeartion perform in mongo db with time
+
+#require('./middleware'), Node.js will attempt to import from the specified file or directory. If the path provided is a directory, Node.js will look for an index.js file within that directory by default.
+
+#app.use([path,] callback) :
+ - path (optional): The path at which the middleware function or router will be invoked. 
+
+ - common use:
+   i) Mounting Routers:
+      - Using app.use() to mount routers allows you to specify a base path for a set of routes handled by the router.
+   
+   ii)Middleware Functions:
+     - They can perform tasks, modify the request or response objects, or terminate the request-response cycle.
+
+# 
