@@ -29,4 +29,6 @@
    ii)Middleware Functions:
      - They can perform tasks, modify the request or response objects, or terminate the request-response cycle.
 
-# 
+# app.set() is a method in Express used to set various configurations for the Express application.
+
+**# parse:  When dealing with different data formats such as JSON, XML, HTML, or even simple text, parsing allows a program to understand the structure of the data and extract relevant information. 
